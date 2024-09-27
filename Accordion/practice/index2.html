@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Accordion 2</title>
+    <style>
+      .accordion {
+        width: 100%;
+        border: none;
+        padding: 18px;
+        text-align: left;
+        background-color: #eee;
+        color: #444;
+        cursor: pointer;
+      }
+      .panel {
+        padding: 0 18px;
+        overflow: hidden;
+        text-align: justify;
+        display: none;
+        transition: 0.5s;
+      }
+      .active,
+      .accordion:hover {
+        background-color: #ccc;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Accordion 2</h2>
+
+    <button class="accordion">Section 1</button>
+    <div class="panel">
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Error provident
+        et debitis blanditiis saepe quibusdam minima consequatur laudantium,
+        totam, voluptatum officiis hic modi. Numquam officiis corrupti
+        voluptatum harum odio dolore quisquam soluta rem impedit expedita
+        dolorum voluptatem iure, quasi ut voluptates recusandae eius ipsum, hic
+        reiciendis labore libero id animi! Cum fugiat voluptas, vero similique
+        tempore optio officia libero maiores.
+      </p>
+    </div>
+
+    <button class="accordion">Section 2</button>
+    <div class="panel">
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Error provident
+        et debitis blanditiis saepe quibusdam minima consequatur laudantium,
+        totam, voluptatum officiis hic modi. Numquam officiis corrupti
+        voluptatum harum odio dolore quisquam soluta rem impedit expedita
+        dolorum voluptatem iure, quasi ut voluptates recusandae eius ipsum, hic
+        reiciendis labore libero id animi! Cum fugiat voluptas, vero similique
+        tempore optio officia libero maiores.
+      </p>
+    </div>
+
+    <button class="accordion">Section 3</button>
+    <div class="panel">
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Error provident
+        et debitis blanditiis saepe quibusdam minima consequatur laudantium,
+        totam, voluptatum officiis hic modi. Numquam officiis corrupti
+        voluptatum harum odio dolore quisquam soluta rem impedit expedita
+        dolorum voluptatem iure, quasi ut voluptates recusandae eius ipsum, hic
+        reiciendis labore libero id animi! Cum fugiat voluptas, vero similique
+        tempore optio officia libero maiores.
+      </p>
+    </div>
+    <script>
+      let acc = document.getElementsByClassName("accordion");
+      for (let i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function () {
+          this.classList.toggle("active");
+          let panel = this.nextElementSibling;
+          if (panel.style.display === "block") {
+            panel.style.display = "none";
+          } else {
+            panel.style.display = "block";
+          }
+        });
+      }
+    </script>
+  </body>
+</html>

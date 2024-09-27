@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Accordion 3</title>
+    <style>
+      .accordion {
+        width: 100%;
+        padding: 18px;
+        border: none;
+        text-align: left;
+        background-color: #eee;
+        color: blueviolet;
+        font-size: larger;
+        cursor: pointer;
+      }
+
+      .active,
+      .accordion:hover {
+        background-color: #ccc;
+      }
+      .panel {
+        background-color: springgreen;
+        padding: 18px 18px;
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Accordion 3</h2>
+    <button class="accordion">Section 1</button>
+    <div class="panel">
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam eius
+        iusto sunt dolor sit magni reiciendis accusamus. Quasi saepe iste ad
+        culpa voluptatum est odit, quaerat eveniet alias tempore sed, odio ab
+        rerum animi laboriosam distinctio nihil doloremque tenetur facilis
+        aliquam sapiente sequi? Alias et temporibus deserunt quasi? Sit, nisi.
+      </p>
+    </div>
+    <button class="accordion">Section 2</button>
+    <div class="panel">
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam eius
+        iusto sunt dolor sit magni reiciendis accusamus. Quasi saepe iste ad
+        culpa voluptatum est odit, quaerat eveniet alias tempore sed, odio ab
+        rerum animi laboriosam distinctio nihil doloremque tenetur facilis
+        aliquam sapiente sequi? Alias et temporibus deserunt quasi? Sit, nisi.
+      </p>
+    </div>
+    <button class="accordion">Section 3</button>
+    <div class="panel">
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam eius
+        iusto sunt dolor sit magni reiciendis accusamus. Quasi saepe iste ad
+        culpa voluptatum est odit, quaerat eveniet alias tempore sed, odio ab
+        rerum animi laboriosam distinctio nihil doloremque tenetur facilis
+        aliquam sapiente sequi? Alias et temporibus deserunt quasi? Sit, nisi.
+      </p>
+    </div>
+    <script>
+      let acc = document.getElementsByClassName("accordion");
+      for (let i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function () {
+          this.classList.toggle("active");
+          let panel = this.nextElementSibling;
+          if (panel.style.display === "block") {
+            panel.style.display = "none";
+          } else {
+            panel.style.display = "block";
+          }
+        });
+      }
+    </script>
+  </body>
+</html>
